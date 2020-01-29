@@ -12,7 +12,7 @@ bam_prefix="${bam_file%.bam}"
 
 # Download bam and index files
 dx download "$input_bam" -o "$bam_file"
-dx download "$input_bam_index" -o "${bam_prefix}.bai"
+dx download "$input_bam_index" -o "${bam_prefix}.bai" 
 
 # Create output directory
 mkdir -p out/verifybamid_out/QC/
@@ -26,5 +26,5 @@ verifyBamID --vcf Omni25_genotypes_1525_samples_v2.b37.PASS.ALL.sites.vcf.gz \
      --out out/verifybamid_out/QC/$bam_prefix \
      --verbose --ignoreRG --precise --maxDepth 1000
 
-# Upload results to DNA Nexus
+# Upload results to DNAnexus
 dx-upload-all-outputs
