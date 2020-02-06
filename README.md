@@ -1,12 +1,10 @@
 # dnanexus_verifybamid v1.0
-statgen/verifyBamID [v1.1.3] (https://github.com/ewels/MultiQC/releases/tag/v1.3)
+statgen/verifyBamID [v1.1.3] (as tested with https://github.com/ewels/MultiQC/releases/tag/v1.3)
 
 ## What does this app do?
 This app runs verifyBamID to detect sample contamination from population allele frequencies.
 
-verifyBamID models the sequence reads as mixture of two unknown samples based on the allele frequency information in a provided VCF file. Here, the VCF file used
-
-The required VCF is packaged with the app under resources/home/dnanexus.
+verifyBamID models the sequence reads as mixture of two unknown samples based on the allele frequency information in a provided VCF file; the VCF is packaged with the app under resources/home/dnanexus.
 See (https://genome.sph.umich.edu/wiki/VerifyBamID) for further details.
 
 ## What are typical use cases for this app?
