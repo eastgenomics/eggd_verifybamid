@@ -1,4 +1,4 @@
-#eggd_verifybamid
+# eggd_verifybamid
 
 Based on statgen/verifyBamID [v1.1.3] (tested with https://github.com/ewels/MultiQC/releases/tag/v1.3)
 
