@@ -1,4 +1,4 @@
-eggd_verifybamid v2.0.0
+#eggd_verifybamid
 
 Based on statgen/verifyBamID [v1.1.3] (tested with https://github.com/ewels/MultiQC/releases/tag/v1.3)
 
@@ -29,4 +29,5 @@ The app runs verifyBamID using an input BAM file and uploads the outputs to DNAn
 - This app is only known to work on exome-like samples, as opposed to small panels.
 - verifyBamID will only assess autosomal chromosomes in the input VCF.
 
-## This app was made by EMEE GLH, and is forked from an app made by Viapath - https://github.com/moka-guys/dnanexus_verifybamid/releases/tag/v1.1.1
+### This app was made by EMEE GLH, and is forked from an app made by Viapath
+(https://github.com/moka-guys/dnanexus_verifybamid/releases/tag/v1.1.1)
