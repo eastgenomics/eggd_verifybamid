@@ -1,4 +1,4 @@
-# dnanexus_verifybamid v1.0
+eggd_verifybamid v1.0
 statgen/verifyBamID [v1.1.3] (as tested with https://github.com/ewels/MultiQC/releases/tag/v1.3)
 
 ## What does this app do?
