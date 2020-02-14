@@ -1,5 +1,6 @@
-eggd_verifybamid v1.0
-statgen/verifyBamID [v1.1.3] (as tested with https://github.com/ewels/MultiQC/releases/tag/v1.3)
+eggd_verifybamid v2.0.0
+
+Based on statgen/verifyBamID [v1.1.3] (tested with https://github.com/ewels/MultiQC/releases/tag/v1.3)
 
 ## What does this app do?
 This app runs verifyBamID to detect sample contamination from population allele frequencies.
