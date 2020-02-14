@@ -1,14 +1,14 @@
 {
-  "name": "verify_bam_id_v1.0",
-  "title": "verifyBamID_v1.0",
-  "summary": "v1.0 - Detects sample contamination from genotypic profiles; forked from moka-guys v1.1.1",
+  "name": "verifybamid_v2.0.0",
+  "title": "verifyBamID_v2.0.0",
+  "summary": "v2.0.0 - Detects sample contamination from genotypic profiles; forked from moka-guys v1.1.1",
   "tags": [
     "NGS QC",
     "Read QC",
     "Statistics"
   ],
   "properties": {
-    "github release": "v1.0"
+    "github release": "v2.0.0"
   },
   "dxapi": "1.0.0",
   "inputSpec": [
