@@ -1,6 +1,6 @@
 {
-  "name": "verifybamid_v2.0.0",
-  "title": "verifyBamID_v2.0.0",
+  "name": "verifybamid_v2.0.1",
+  "title": "verifyBamID_v2.0.1",
   "summary": "v2.0.0 - Detects sample contamination from genotypic profiles; forked from moka-guys v1.1.1",
   "tags": [
     "NGS QC",
@@ -8,7 +8,7 @@
     "Statistics"
   ],
   "properties": {
-    "github release": "v2.0.0"
+    "github release": "v2.0.1"
   },
   "dxapi": "1.0.0",
   "inputSpec": [
@@ -17,14 +17,24 @@
       "label": "Input BAM file",
       "help": "The ID of an 'unrefined' BAM file for contamination checking",
       "class": "file",
-      "patterns": ["*.bam"]
+      "patterns": ["*.bam"],
+      "optional": false
     },
     {
       "name": "input_bam_index",
       "label": "Index of input BAM",
-      "help": "The index file corresponding to the input BAM file.",
+      "help": "The index file corresponding to the input BAM file",
       "class": "file",
-      "patterns": ["*.bai"]
+      "patterns": ["*.bai"],
+      "optional": false
+    },
+    {
+      "name": "vcf_file",
+      "label": "A vcf file containing SNPs to calculate contamination",
+      "help": "Select the vcf that corresponds to the correct genome build, GRCh37 or GRCh38",
+      "class": "file",
+      "patterns": ["*.vcf.gz", "*.vcf"],
+      "optional": false
     }
   ],
   "outputSpec": [
@@ -36,13 +46,18 @@
     }
   ],
   "runSpec": {
+    "version": "1",
     "file": "src/code.sh",
     "release": "16.04",
     "interpreter": "bash",
+    "timeoutPolicy": {
+      "*": {
+        "hours": 2
+      }
+    },
     "distribution": "Ubuntu"
   },
   "access": {
-    "allProjects": "VIEW",
     "network": [
       "*"
     ]
