@@ -1,14 +1,14 @@
 {
-  "name": "verifybamid_v2.0.1",
-  "title": "verifyBamID_v2.0.1",
-  "summary": "v2.0.0 - Detects sample contamination from genotypic profiles; forked from moka-guys v1.1.1",
+  "name": "verifybamid_v2.1.0",
+  "title": "verifyBamID_v2.1.0",
+  "summary": "v2.1.0 - Detects sample contamination from genotypic profiles; forked from moka-guys v1.1.1",
   "tags": [
     "NGS QC",
     "Read QC",
     "Statistics"
   ],
   "properties": {
-    "github release": "v2.0.1"
+    "github release": "v2.1.0"
   },
   "dxapi": "1.0.0",
   "inputSpec": [
@@ -30,7 +30,7 @@
     },
     {
       "name": "vcf_file",
-      "label": "A vcf file containing SNPs to calculate contamination",
+      "label": "A vcf file containing the SNPs used to calculate contamination",
       "help": "Select the vcf that corresponds to the correct genome build, GRCh37 or GRCh38",
       "class": "file",
       "patterns": ["*.vcf.gz", "*.vcf"],
