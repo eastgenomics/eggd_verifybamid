@@ -62,6 +62,12 @@
       "*"
     ]
   },
+  "developers":[
+    "org-emee_1"
+  ],
+  "authorizedUsers": [
+    "org-emee_1"
+  ],
   "ignoreReuse": false,
   "regionalOptions": {
     "aws:eu-central-1": {
