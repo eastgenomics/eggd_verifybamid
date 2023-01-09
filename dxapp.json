@@ -1,14 +1,14 @@
 {
   "name": "eggd_verifybamid",
-  "title": "verifyBamID_v2.1.0",
-  "summary": "v2.1.0 - Detects sample contamination from genotypic profiles; forked from moka-guys v1.1.1",
+  "title": "verifyBamID_v2.2.0",
+  "summary": "v2.2.0 - Detects sample contamination from genotypic profiles; forked from moka-guys v1.1.1",
   "tags": [
     "NGS QC",
     "Read QC",
     "Statistics"
   ],
   "properties": {
-    "github release": "v2.1.0"
+    "github release": "v2.2.0"
   },
   "dxapi": "1.0.0",
   "inputSpec": [
@@ -62,6 +62,12 @@
       "*"
     ]
   },
+  "developers":[
+    "org-emee_1"
+  ],
+  "authorizedUsers": [
+    "org-emee_1"
+  ],
   "ignoreReuse": false,
   "regionalOptions": {
     "aws:eu-central-1": {
