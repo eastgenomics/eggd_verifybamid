@@ -1,11 +1,11 @@
 # eggd_verifybamid
 
-Based on statgen/verifyBamID [v1.1.3] (tested with https://github.com/ewels/MultiQC/releases/tag/v1.3)
+eggd_ verifybamid is based on statgen/verifyBamID [v1.1.3] (tested with https://github.com/ewels/MultiQC/releases/tag/v1.3) made for use by the bioinformatics team at Addenbrookes for accessing contamination in genomic samples.
 
 ## What does this app do?
 This app runs verifyBamID to detect sample contamination from population allele frequencies.
 
-verifyBamID models the sequence reads as mixture of two unknown samples based on the allele frequency information in a provided VCF file; the VCF is packaged with the app under resources/home/dnanexus.
+verifyBamID models the sequence reads as mixture of two unknown samples based on the allele frequency information in a provided VCF file; the VCF is packaged with the app under resources/home/dnanexus. # is this causing problems for me building the app?
 See (https://genome.sph.umich.edu/wiki/VerifyBamID) for further details.
 
 ## What are typical use cases for this app?
@@ -31,3 +31,4 @@ The app runs verifyBamID using an input BAM file and uploads the outputs to DNAn
 
 ### This app was made by EMEE GLH, and is forked from an app made by Viapath
 (https://github.com/moka-guys/dnanexus_verifybamid/releases/tag/v1.1.1)
+src/code.sh was updated to reflect that of (https://github.com/moka-guys/dnanexus_verifybamid/releases/tag/v1.1.1) # update
