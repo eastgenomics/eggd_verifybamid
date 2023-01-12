@@ -35,7 +35,15 @@
       "class": "file",
       "patterns": ["*.vcf.gz", "*.vcf"],
       "optional": false
-    }
+    },
+    {
+      "name": "skip",
+      "label": "skip",
+      "help": "Skip this step if not required",
+      "class": "boolean",
+      "default": true,
+      "optional": false
+	  }
   ],
   "outputSpec": [
     {
