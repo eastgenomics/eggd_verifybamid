@@ -42,11 +42,12 @@
       "name": "verifybamid_out",
       "label": "verifyBamID output files",
       "help": "verifyBamID contamination statistics, read depth distribution and log file",
-      "class": "array:file"
+      "class": "array:file",
+      "optional": true
     }
   ],
   "runSpec": {
-    "version": "1",
+    "version": "0",
     "file": "src/code.sh",
     "release": "20.04",
     "interpreter": "bash",
