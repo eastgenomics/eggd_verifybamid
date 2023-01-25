@@ -5,7 +5,8 @@ eggd_ verifybamid is based on statgen/verifyBamID [v1.1.3] (tested with https://
 ## What does this app do?
 This app runs verifyBamID to detect sample contamination from population allele frequencies.
 
-verifyBamID models the sequence reads as mixture of two unknown samples based on the allele frequency information in a provided VCF file; the VCF is packaged with the app under resources/home/dnanexus. # is this causing problems for me building the app?
+verifyBamID models the sequence reads as mixture of two unknown samples based on the allele frequency information in a provided VCF file. Markers are selected from the VCF where AF >= 0.010000 and callRate >= 0.500000, and contaminated sites are determined based on greater than expected heterozygousity rates.
+The VCF is packaged with the app under resources/home/dnanexus. # is this causing problems for me building the app?
 See (https://genome.sph.umich.edu/wiki/VerifyBamID) for further details.
 
 ## What are typical use cases for this app?
@@ -13,6 +14,7 @@ This app should be executed stand-alone or as part of a DNAnexus workflow for a 
 
 ## What data are required for this app to run?
 The app requires a BAM file (.bam) and a corresponding index file (.bai) to run.
+Additionally there is a skip argument requiring a Boolean True/False. If skip == True do not run the tool and no outputs are provided
 
 ## What does this app output?
 The app outputs three files, where [outPrefix] is the bam filename without extension:
@@ -30,5 +32,4 @@ The app runs verifyBamID using an input BAM file and uploads the outputs to DNAn
 - verifyBamID will only assess autosomal chromosomes in the input VCF.
 
 ### This app was made by EMEE GLH, and is forked from an app made by Viapath
-(https://github.com/moka-guys/dnanexus_verifybamid/releases/tag/v1.1.1)
-src/code.sh was updated to reflect that of (https://github.com/moka-guys/dnanexus_verifybamid/releases/tag/v1.1.1) # update
+Based on https://github.com/moka-guys/dnanexus_verifybamid/releases/tag/v1.2.0
