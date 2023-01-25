@@ -10,6 +10,7 @@
   "properties": {
     "github release": "v2.2.0"
   },
+  "whatsNew": "* v2.2.0 Update name and version, add developer and authorisedUser section to json, add optional tag to outputSpec, add skip argument;",
   "dxapi": "1.0.0",
   "inputSpec": [
     {
