@@ -1,5 +1,6 @@
 {
   "name": "eggd_verifybamid",
+  "version": "2.2.0",
   "title": "verifyBamID_v2.2.0",
   "summary": "v2.2.0 - Detects sample contamination from genotypic profiles; forked from moka-guys v1.1.1",
   "tags": [
