@@ -1,20 +1,18 @@
 # eggd_verifybamid
 
-eggd_ verifybamid is based on statgen/verifyBamID [v1.1.3] (tested with https://github.com/ewels/MultiQC/releases/tag/v1.3) made for use by the bioinformatics team at Addenbrookes for accessing contamination in genomic samples.
+eggd_ verifybamid is based on statgen/verifyBamID [v1.1.3] (tested with https://github.com/ewels/MultiQC/releases/tag/v1.3) made for use by the bioinformatics team at Addenbrookes for assessing contamination in genomic samples.
 
 ## What does this app do?
 This app runs verifyBamID to detect sample contamination from population allele frequencies.
 
 verifyBamID models the sequence reads as mixture of two unknown samples based on the allele frequency information in a provided VCF file. Markers are selected from the VCF where AF >= 0.010000 and callRate >= 0.500000, and contaminated sites are determined based on greater than expected heterozygousity rates.
-The VCF is packaged with the app under resources/home/dnanexus. # is this causing problems for me building the app?
-See (https://genome.sph.umich.edu/wiki/VerifyBamID) for further details.
 
 ## What are typical use cases for this app?
 This app should be executed stand-alone or as part of a DNAnexus workflow for a single sample.
 
 ## What data are required for this app to run?
-The app requires a BAM file (.bam) and a corresponding index file (.bai) to run.
-Additionally there is a skip argument requiring a Boolean True/False. If skip == True do not run the tool and no outputs are provided
+The app requires a BAM file (.bam), a corresponding index file (.bai), and a VCF file (.vcf) to run.
+Additionally there is a skip argument requiring a Boolean True/False. If skip == True the tool does not run and no outputs are produced.
 
 ## What does this app output?
 The app outputs three files, where [outPrefix] is the bam filename without extension:
