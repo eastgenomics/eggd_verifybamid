@@ -4,13 +4,11 @@
 # and to output each line as it is executed -- useful for debugging
 set -e -x -o pipefail
 # only proceed if skip != True
-if [ $skip == false ]; 
+if [ $skip == false ];
      then
      
-     sambamba merge $advanced_options "$output_name" "${sorted_bams_path[@]}"
-     
      # Store the bam file name as a string
-     bam_file=`dx describe "$input_bam_name"
+     bam_file="$input_bam_name"
 
      # Remove .bam extension from bam file name
      bam_prefix="${bam_file%.bam}"
@@ -20,7 +18,7 @@ if [ $skip == false ];
      
      # Download bam, index and vcf files
      dx download "$input_bam" -o "$bam_file"
-     dx download "$input_bam_index" -o "${bam_prefix}.bai" 
+     dx download "$input_bam_index" -o "${bam_prefix}.bai"
      dx download "$vcf_file" -o "$vcf_input"
      
      # Create output directory
