@@ -6,6 +6,9 @@ set -e -x -o pipefail
 # only proceed if skip != True
 if [ $skip == false ]; 
      then
+     
+     sambamba merge $advanced_options "$output_name" "${sorted_bams_path[@]}"
+     
      # Store the bam file name as a string
      bam_file=`dx describe "$input_bam_name"
 
