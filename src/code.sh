@@ -4,11 +4,9 @@
 # and to output each line as it is executed -- useful for debugging
 set -e -x -o pipefail
 
-# store vcf file name as a string
-vcf_input=`dx describe "${vcf_file}" --name`
 dx download "$input_bam" -o "$input_bam_name"
 dx download "$input_bam_index" -o "${input_bam_prefix}.bai"
-dx download "$vcf_file" -o "$vcf_input"
+dx download "$vcf_file" -o "$vcf_input_name"
 
 # Create output directory
 mkdir -p out/verifybamid_out/
@@ -17,7 +15,7 @@ mkdir -p out/verifybamid_out/
 # --ignoreRG; to check the contamination for the entire BAM rather than examining individual read groups
 # --precise; calculate the likelihood in log-scale for high-depth data (recommended when --maxDepth is greater than 20)
 # --maxDepth 1000; For the targeted exome sequencing, --maxDepth 1000 and --precise is recommended.
-verifyBamID --vcf $vcf_input \
+verifyBamID --vcf $vcf_input_name \
      --bam $input_bam_name \
      --out out/verifybamid_out/$input_bam_prefix \
      --verbose --ignoreRG --precise --maxDepth 1000
