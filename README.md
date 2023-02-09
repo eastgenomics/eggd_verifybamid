@@ -12,7 +12,6 @@ This app should be executed stand-alone or as part of a DNAnexus workflow for a 
 
 ## What data are required for this app to run?
 The app requires a BAM file (.bam), a corresponding index file (.bai), and a VCF file (.vcf) to run.
-Additionally there is a skip argument requiring a Boolean True/False. If skip == True the tool does not run and no outputs are produced.
 
 ## What does this app output?
 The app outputs three files, where [outPrefix] is the bam filename without extension:
