@@ -6,7 +6,7 @@ set -e -x -o pipefail
 
 dx download "$input_bam" -o "$input_bam_name"
 dx download "$input_bam_index" -o "${input_bam_prefix}.bai"
-dx download "$vcf_file" -o "$vcf_input_name"
+dx download "$vcf_file" -o "$input_vcf_name"
 
 # Create output directory
 mkdir -p out/verifybamid_out/
