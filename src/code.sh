@@ -6,8 +6,6 @@ set -e -x -o pipefail
 
 # store vcf file name as a string
 vcf_input=`dx describe "${vcf_file}" --name`
-
-# Download bam, index and vcf files
 dx download "$input_bam" -o "$input_bam_name"
 dx download "$input_bam_index" -o "${input_bam_prefix}.bai"
 dx download "$vcf_file" -o "$vcf_input"
@@ -26,4 +24,3 @@ verifyBamID --vcf $vcf_input \
 
 # Upload results to DNAnexus
 dx-upload-all-outputs
-
