@@ -1,15 +1,9 @@
 {
-  "name": "verifybamid_v2.1.0",
-  "title": "verifyBamID_v2.1.0",
-  "summary": "v2.1.0 - Detects sample contamination from genotypic profiles; forked from moka-guys v1.1.1",
-  "tags": [
-    "NGS QC",
-    "Read QC",
-    "Statistics"
-  ],
-  "properties": {
-    "github release": "v2.1.0"
-  },
+  "name": "eggd_verifybamid", 
+  "title": "verifyBamID",
+  "summary": "v2.2.0 - Detects sample contamination from genotypic profiles; forked from moka-guys v1.1.1",
+  "version": "2.2.0",
+  "whatsNew": "* v2.2.0 Update name and version, add developer and authorisedUser section to json, add optional tag to outputSpec, add skip argument;",
   "dxapi": "1.0.0",
   "inputSpec": [
     {
@@ -42,26 +36,33 @@
       "name": "verifybamid_out",
       "label": "verifyBamID output files",
       "help": "verifyBamID contamination statistics, read depth distribution and log file",
-      "class": "array:file"
+      "class": "array:file",
+      "optional": true
     }
   ],
   "runSpec": {
-    "version": "1",
-    "file": "src/code.sh",
-    "release": "16.04",
     "interpreter": "bash",
+    "distribution": "Ubuntu",
+    "release": "20.04",
+    "version": "0",
+    "file": "src/code.sh",
     "timeoutPolicy": {
       "*": {
         "hours": 2
       }
-    },
-    "distribution": "Ubuntu"
+    }
   },
   "access": {
     "network": [
       "*"
     ]
   },
+  "developers":[
+    "org-emee_1"
+  ],
+  "authorizedUsers": [
+    "org-emee_1"
+  ],
   "ignoreReuse": false,
   "regionalOptions": {
     "aws:eu-central-1": {
