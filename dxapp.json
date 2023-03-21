@@ -1,9 +1,9 @@
 {
   "name": "eggd_verifybamid", 
   "title": "verifyBamID",
-  "summary": "v2.2.0 - Detects sample contamination from genotypic profiles; forked from moka-guys v1.1.1",
-  "version": "2.2.0",
-  "whatsNew": "* v2.2.0 Update name and version, add developer and authorisedUser section to json, add optional tag to outputSpec, add skip argument;",
+  "summary": "v2.2.1 - Detects sample contamination from genotypic profiles; forked from moka-guys v1.2.0",
+  "version": "2.2.1",
+  "whatsNew": "* v2.2.1 Add licence file and update instance type;",
   "dxapi": "1.0.0",
   "inputSpec": [
     {
@@ -68,7 +68,7 @@
     "aws:eu-central-1": {
       "systemRequirements": {
         "main": {
-          "instanceType": "mem1_ssd1_x2"
+          "instanceType": "mem1_ssd1_v2_x2"
         }
       }
     }
