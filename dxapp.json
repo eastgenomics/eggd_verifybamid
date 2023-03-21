@@ -1,7 +1,7 @@
 {
   "name": "eggd_verifybamid", 
   "title": "verifyBamID",
-  "summary": "v2.2.1 - Detects sample contamination from genotypic profiles; forked from moka-guys v1.1.1",
+  "summary": "v2.2.1 - Detects sample contamination from genotypic profiles; forked from moka-guys v1.2.0",
   "version": "2.2.1",
   "whatsNew": "* v2.2.1 Add licence file and update instance type;",
   "dxapi": "1.0.0",
