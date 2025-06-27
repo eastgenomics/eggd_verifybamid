@@ -1,9 +1,9 @@
 {
   "name": "eggd_verifybamid", 
-  "title": "verifyBamID",
-  "summary": "v2.2.1 - Detects sample contamination from genotypic profiles; forked from moka-guys v1.2.0",
-  "version": "2.2.1",
-  "whatsNew": "* v2.2.1 Add licence file and update instance type;",
+  "title": "eggd_verifyBamID",
+  "summary": "v2.3.0 - Detects sample contamination from genotypic profiles; forked from moka-guys v1.2.0",
+  "version": "2.3.0",
+  "whatsNew": "* v2.3.0 Add ability to take cram as an input;",
   "dxapi": "1.0.0",
   "inputSpec": [
     {
@@ -11,7 +11,7 @@
       "label": "Input BAM file",
       "help": "The ID of an 'unrefined' BAM file for contamination checking",
       "class": "file",
-      "patterns": ["*.bam"],
+      "patterns": ["*.bam", "*.cram"],
       "optional": false
     },
     {
@@ -19,8 +19,28 @@
       "label": "Index of input BAM",
       "help": "The index file corresponding to the input BAM file",
       "class": "file",
-      "patterns": ["*.bai"],
+      "patterns": ["*.bai", "*.crai"],
       "optional": false
+    },
+    {
+      "name": "reference_fasta",
+      "label": "fasta file",
+      "class": "file",
+      "optional": true,
+      "patterns": [
+        "*.fa.gz"
+      ],
+      "help": "reference file to align CRAM file to"
+    },
+    {
+      "name": "reference_fasta_index",
+      "label": "fasta index file",
+      "class": "file",
+      "optional": true,
+      "patterns": [
+        "*.fa.fai"
+      ],
+      "help": "Index reference file to align CRAM file to"
     },
     {
       "name": "vcf_file",
@@ -45,6 +65,17 @@
     "distribution": "Ubuntu",
     "release": "20.04",
     "version": "0",
+    "assetDepends": [
+      {
+          "id": "record-Gg2GP0Q4zJKFz8gP3Gf4Q11v"
+      },
+      {
+          "name": "samtools_asset",
+          "version": "2.0.0",
+          "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+          "folder": "/app_assets/samtools/samtools_v1.19.2/"
+      }
+    ],
     "file": "src/code.sh",
     "timeoutPolicy": {
       "*": {
