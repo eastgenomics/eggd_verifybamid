@@ -8,21 +8,16 @@ dx download "$input_bam" -o "$input_bam_name"
 dx download "$input_bam_index" -o "$input_bam_index_name"
 dx download "$vcf_file" -o "$vcf_file_name"
 
-
-# if input_bam_name == cram, convert to bam and reindex?, then use input_bam_prefix.bam later
-
+# if input_bam_name == cram, convert to bam and reindex
 if [[ $input_bam_name == *.cram ]]; then
      echo "file is CRAM"
 
-     # to add - try, if file does not exist then error with "reference fasta needed for cram"
      dx download "$reference_fasta" -o "$reference_fasta_name"
      dx download "$reference_fasta_index" -o "$reference_fasta_index_name"
      samtools view -b -T "$reference_fasta_name" -o "$input_bam_prefix".bam "$input_bam_name"
      samtools index "$input_bam_prefix".bam
 
 fi
-
-
 
 # Create output directory
 mkdir -p out/verifybamid_out/
