@@ -7,17 +7,17 @@
   "dxapi": "1.0.0",
   "inputSpec": [
     {
-      "name": "input_bam",
-      "label": "Input BAM file",
-      "help": "The ID of an 'unrefined' BAM file for contamination checking",
+      "name": "input_file",
+      "label": "Input file",
+      "help": "The ID of BAM or CRAM file for contamination checking",
       "class": "file",
       "patterns": ["*.bam", "*.cram"],
       "optional": false
     },
     {
-      "name": "input_bam_index",
-      "label": "Index of input BAM",
-      "help": "The index file corresponding to the input BAM file",
+      "name": "input_file_index",
+      "label": "Index of input file",
+      "help": "The index file corresponding to the input BAM or CRAM file",
       "class": "file",
       "patterns": ["*.bai", "*.crai"],
       "optional": false
@@ -40,7 +40,7 @@
       "patterns": [
         "*.fa.fai"
       ],
-      "help": "Index reference file to align CRAM file to"
+      "help": "Index reference file to align CRAM file to. Required if CRAM given"
     },
     {
       "name": "vcf_file",
